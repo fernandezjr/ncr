@@ -9,6 +9,9 @@ import com.ncr.modelo.Denominacion;
 
 public class Test 
 {
+	public static final String DENOMINACIONES = "C:\\Users\\Rodrigo\\Documents\\Repositorio\\Eclipse\\ncr\\NCR\\src\\resources\\denominaciones.txt";
+	public static final String DENOMINACIONES_CON_NIVEL = "C:\\Users\\Rodrigo\\Documents\\Repositorio\\Eclipse\\ncr\\NCR\\src\\resources\\denominaciones_nivel.txt";
+	
 	public static void main(String[] args)
 	{
 		try 
@@ -25,14 +28,14 @@ public class Test
 	public static void probarLectorArchivo() throws NumberFormatException, IOException
 	{
 		LectorArchivo lector = new LectorArchivo();
-		List<Denominacion> denominaciones = lector.leerArchivo("C:\\Users\\Rodrigo\\Documents\\Repositorio\\Eclipse\\ncr\\NCR\\src\\resources\\denominaciones.txt");
+		List<Denominacion> denominaciones = lector.leerArchivo(DENOMINACIONES);
 		System.out.println("Denominaciones\n" + denominaciones);
 	}
 	
 	public static void probarLectorArchivoConNivel() throws NumberFormatException, IOException
 	{
 		LectorArchivo lector = new LectorArchivoConNivel();
-		List<Denominacion> denominaciones = lector.leerArchivo("C:\\Users\\Rodrigo\\Documents\\Repositorio\\Eclipse\\ncr\\NCR\\src\\resources\\denominaciones_nivel.txt");
+		List<Denominacion> denominaciones = lector.leerArchivo(DENOMINACIONES_CON_NIVEL);
 		System.out.println("Denominaciones\n" + denominaciones);
 	}
 }
